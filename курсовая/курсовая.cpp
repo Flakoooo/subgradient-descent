@@ -142,7 +142,7 @@ static std::vector<double> subgradient_descent(
         }
 
         // Обновляем точку
-        for (size_t i = 0; i < x.size(); ++i) x[i] -= step_size * g[i];
+        for (size_t k = 0; k < x.size(); ++k) x[k] -= step_size * g[k];
 
         // Вычисляем текущее значение функции
         double current_value = settings.objective(x);
