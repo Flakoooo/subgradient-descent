@@ -115,10 +115,10 @@ static std::vector<double> subgradient_descent(
         // Вычисляем субградиент в текущей точке
         std::vector<double> g = settings.subgradient(x);
 
-        // Проверяем условие остановки (меньше эпсилон для компоненты субградиента)
+        // Проверяем условие остановки
         bool stop_condition = true;
-        for (size_t i = 0; i < g.size(); ++i) {
-            if (std::abs(g[i]) >= settings.epsilon) {
+        for (size_t j = 0; j < g.size(); ++j) {
+            if (std::abs(g[j]) >= settings.epsilon) {
                 stop_condition = false;
                 break;
             }
