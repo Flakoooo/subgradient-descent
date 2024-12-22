@@ -209,5 +209,6 @@ int main() {
     // Вывод результата
     std::cout << "Оптимальное решение: (" << solution[0] << ", " << solution[1] << ")\n";
 
+    system("pause");
     return EXIT_SUCCESS;
 }
